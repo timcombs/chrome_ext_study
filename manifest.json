@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0.4",
+  "name": "Getting Started",
+  "description": "this extension is for testing out various extension functionality. currently it toggles the page background to red to white and back again",
+  "version": "1.1.0",
 
   "permissions": [
     "activeTab",
@@ -11,7 +11,7 @@
   ],
   
   "browser_action": {
-    
+    "default_icon": "supragenius_icon.png",
     "default_title": "make this page red if the image search doesn't work"
   },
 
@@ -21,7 +21,6 @@
   },
 
   "_comment": {
-    "default_icon": "supragenius_icon.png",
     "default_popup": "popup.html"
   }
 }
