@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "basic text replace",
+  "description": "replaces a given text with another given text",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["replaces.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
