@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting Started",
+  "description": "this extension is for testing out various extension functionality. currently it toggles the page background to red to white and back again",
+  "version": "1.1.0",
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  
+  "browser_action": {
+    "default_icon": "supragenius_icon.png",
+    "default_title": "make this page red if the image search doesn't work"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "_comment": {
+    "default_popup": "popup.html"
+  }
+}
