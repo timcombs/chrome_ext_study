@@ -4,21 +4,21 @@
 walk(document.body);
 
 function walk(node) {
-  //this function game from: http://is.gd/mwZp7E
+  //this function came from: http://is.gd/mwZp7E
 
   var child, next;
-
-  if (node.tagName.toLowerCase() == 'input' ||
-      node.tagName.toLowerCase() == 'textarea' ||
-      node.classList.indexOf('ace_editor') > -1) {
-    return;
-  }
+  // if (node.tagName.toLowerCase() == 'input' ||
+  //     node.tagName.toLowerCase() == 'textarea' ||
+  //     node.classList.contains('ace_editor') < 0) {
+  //   return;
+  // }
 
   switch (node.nodeType) {
+  case 3: //text node
+    handleText(node);
+    break;
   case 1: //element
-    //break;
-  case 2: //document
-    //break;
+  case 9: //document
   case 11:  //document fragment
     child = node.firstChild;
     while (child) {
@@ -27,9 +27,7 @@ function walk(node) {
       child = next;
     }
     break;
-  case 3: //text node
-    handleText(node);
-    break;
+  
   }
 
 }
@@ -40,6 +38,7 @@ function handleText(textNode) {
   v = v.replace(/\bthe\b/g, 'ugh');
   v = v.replace(/\bThe\b/g, 'ugh');
   v = v.replace(/\bTHE\b/g, 'ugh');
+  v = v.replace(/\bTrump\b/g, 'Agent Orange DrumpfShape');
 
   textNode.nodeValue = v;
 
