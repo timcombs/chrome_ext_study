@@ -35,16 +35,16 @@ function walk(node) {
 function handleText(textNode) {
   var v = textNode.nodeValue;
 
-  v = v.replace(/\ba\b/g, 'u');
-  v = v.replace(/\be\b/g, 'u');
-  v = v.replace(/\bi\b/g, 'u');
-  v = v.replace(/\bo\b/g, 'u');
-  v = v.replace(/\bu\b/g, 'u');
-  v = v.replace(/\bA\b/g, 'U');
-  v = v.replace(/\bE\b/g, 'U');
-  v = v.replace(/\bI\b/g, 'U');
-  v = v.replace(/\bO\b/g, 'U');
-  v = v.replace(/\bU\b/g, 'U');
+  v = v.replace(/a/g, 'u');
+  v = v.replace(/e/g, 'u');
+  v = v.replace(/i/g, 'u');
+  v = v.replace(/o/g, 'u');
+  v = v.replace(/u/g, 'u');
+  v = v.replace(/A/g, 'U');
+  v = v.replace(/E/g, 'U');
+  v = v.replace(/I/g, 'U');
+  v = v.replace(/O/g, 'U');
+  v = v.replace(/U/g, 'U');
 
   textNode.nodeValue = v;
 

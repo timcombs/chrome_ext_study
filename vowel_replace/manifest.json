@@ -5,13 +5,15 @@
   "version": "1.0",
   "description" : "u are the internet",
 
-  "icons": {
+  "comment": {
+    "icons": {
     "16": "images/internetu_72_3_16.png",
     "48": "images/internetu_72_3_48.png",
     "128": "images/internet_72_3_128.png"
+    }
   },
 
-  "content scripts":[
+  "content_scripts":[
     {
       "matches" : ["*://*/*"],
       "js" : ["myscript.js"],
