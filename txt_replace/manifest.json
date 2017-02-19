@@ -1,9 +1,21 @@
 {
   "manifest_version": 2,
 
-  "name": "basic text replace",
-  "description": "replaces a given text with another given text",
+  "name": "Agent Orange Trump Replace",
+  "short_name": "Agent Orange Trump Replace",
+  "description": "replaces the name Trump with another given Agent Orange DrumpfShape",
   "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "agent-orange.png",
+    "default_title": "replaces trump with agent orange drumpfshape"
+  },
+
+  "icons": {
+    "16": "agent-orange16.png",
+    "48": "agent-orange48.png",
+    "128": "agent-orange128.png"
+  },
 
   "content_scripts": [
     {
