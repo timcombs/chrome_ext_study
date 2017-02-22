@@ -6,7 +6,25 @@
     document.images is the list of all the images on the document
 */
 
+//loads all images on page load
 rickrollAllImg();
+
+//add listener to document
+document.addEventListener('scroll', isScrolledEnough);
+
+
+
+//how to get page position?
+//what is acceptable distance to scroll?
+//might need to have some kind of counter in here
+function isScrolledEnough() {
+  var yPos = window.scrollY;
+  if (yPos > 500) {
+    rickrollAllImg();
+  }
+  //on scroll past a certain height then run rickrollAllImg again
+
+}
 
 function rickrollAllImg() {
   docImgArray = document.images;
@@ -17,40 +35,3 @@ function rickrollAllImg() {
   }
   console.log('after', docImgArray);
 }
-// walkImgRickrolls(document.body);
-
-// function walkImgRickrolls(node) {
-//   //this function came from: http://is.gd/mwZp7E
-
-//   var child, next;
-
-//   switch (node.nodeType) {
-//   case 3: //text node
-//     handleText(node);
-//     break;
-//   case 1: //element
-//   case 9: //document
-//   case 11:  //document fragment
-//     child = node.firstChild;
-//     while (child) {
-//       next = child.nextSibling;
-//       walk(child);
-//       child = next;
-//     }
-//     break;
-  
-//   }
-
-// }
-
-// function handleText(textNode) {
-//   var v = textNode.nodeValue;
-
-//   v = v.replace(/\bthe\b/g, 'ugh');
-//   v = v.replace(/\bThe\b/g, 'ugh');
-//   v = v.replace(/\bTHE\b/g, 'ugh');
-//   v = v.replace(/\bTrump\b/g, 'Agent Orange DrumpfShape');
-
-//   textNode.nodeValue = v;
-
-// }
