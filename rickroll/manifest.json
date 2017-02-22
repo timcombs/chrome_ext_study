@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Rickroll Image Replace",
+  "short_name": "Rickroll",
+  "description": "replaces all images with pictures of Rick Astley",
+  "version": "0.1.0",
+
+  "browser_action": {
+    "default_title": "replaces img w/pix of rick astley"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["rickroll.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
