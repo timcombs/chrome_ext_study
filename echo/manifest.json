@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "echo - the duplicator",
+  "version": "0.1.0",
+  "description" : "it is quite so nice to hear it twice",
+
+  "content_scripts":[
+    {
+      "matches" : ["*://*/*"],
+      "js" : ["echo.js"],
+      "run_at" : "document_end"
+    }
+  ],
+
+  "comment": {
+    "icons": {
+    "16": "echo_icon16.png",
+    "48": "echo_icon48.png",
+    "128": "echo_icon128.png"
+    }
+  }
+}
