@@ -82,7 +82,7 @@ function handleText(textNode) {
   v = v.replace(/\bTHE\b/g, 'ugh');
   v = v.replace(/\bTrump\b/g, 'Agent Orange DrumpfShape');
 
-  //this is the spot that text node is updated witht the new value
+  //this is the spot that text node is updated with the new value
   //this the moment the DOM is changed!!!
   textNode.nodeValue = v;
 

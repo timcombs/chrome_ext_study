@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Agent Orange Trump Replace",
-  "short_name": "Agent Orange Trump Replace",
-  "description": "replaces the name Trump with another given Agent Orange DrumpfShape",
+  "name": "Chaos Replace",
+  "short_name": "Chaos Replace",
+  "description": "replaces societal and governmental changes in the world as 'unevenly distributed chaos",
   "version": "1.0",
 
   "browser_action": {
     "default_icon": "agent-orange.png",
-    "default_title": "replaces trump with agent orange drumpfshape"
+    "default_title": "replaces societal change with 'unevenly distributed chaos'"
   },
 
   "icons": {
@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["replaces.js"],
+      "js": ["chaos_replace.js"],
       "run_at": "document_end"
     }
   ]
