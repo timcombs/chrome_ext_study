@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "gitImage - capture all images",
+  "short_name": "gitImg",
+  "description": "captures all images on a page and displays them",
+  "version": "0.1.0",
+
+  "browser_action": {
+    "default_title": "gits all images and replaces DOM with them"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["gitImg.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
